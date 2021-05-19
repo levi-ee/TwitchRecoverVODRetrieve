@@ -6,7 +6,7 @@ Uses https://github.com/TwitchRecover/TwitchRecover
 
 ## Download JAR
 
-https://github.com/levi-ee/TwitchRecoverVODRetrieve/releases
+https://github.com/levi-ee/TwitchRecoverVODRetrieve/releases/latest
 
 ## Compile from source and generate JAR
 
