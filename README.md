@@ -13,7 +13,7 @@ https://github.com/levi-ee/TwitchRecoverVODRetrieve/releases
 ```
 git clone git@github.com:levi-ee/TwitchRecoverVODRetrieve.git
 cd TwitchRecoverVODRetrieve
-./gen_jar.sh
+chmod +x gen_jar.sh && ./gen_jar.sh
 ```
 
 ## Useful commands
