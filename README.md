@@ -18,34 +18,78 @@ chmod +x gen_jar.sh && ./gen_jar.sh
 
 ## Useful commands
 
-Get dependencies:
+
+### Only with required Twitch.Recover.jar classes
+
+
+#### Get dependencies
+
+```
+chmod +x get_deps.sh && ./get_deps.sh
+rm Twitch.Recover.jar
+```
+
+#### Compile
+
+```
+javac TwitchRecoverVODRetrieve.java
+```
+
+#### Run class
+
+```
+java TwitchRecoverVODRetrieve "965331363"
+```
+
+#### Generate JAR
+
+After compilation run:
+
+```
+jar cmvf META-INF/MANIFEST.MF TwitchRecoverVODRetrieve.jar TwitchRecoverVODRetrieve.class org/apache org/json TwitchRecover
+```
+
+
+#### Run JAR
+
+```
+java -jar TwitchRecoverVODRetrieve.jar "965331363"
+```
+
+### With full Twitch.Recover.jar
+
+
+#### Get dependencies
 
 ```
 wget https://github.com/TwitchRecover/TwitchRecover/releases/download/2.0aH/Twitch.Recover.jar
 ```
 
-Compile:
+#### Compile
 
 ```
 javac -cp Twitch.Recover.jar TwitchRecoverVODRetrieve.java
 ```
 
-Run class:
+#### Run class
 
 ```
 java -cp Twitch.Recover.jar:. TwitchRecoverVODRetrieve "965331363"
 ```
 
-Generate JAR:
+#### Generate JAR
 
 After compilation run:
 
 ```
-jar cmvf META-INF/MANIFEST.MF TwitchRecoverVODRetrieve.jar Twitch.Recover.jar TwitchRecoverVODRetrieve.class
+echo "Class-Path: Twitch.Recover.jar" >> META-INF/MANIFEST.MF
+jar cmvf META-INF/MANIFEST.MF TwitchRecoverVODRetrieve.jar TwitchRecoverVODRetrieve.class
 ```
 
 
-Run JAR:
+#### Run JAR
+
+Requires `Twitch.Recover.jar` on the same directory.
 
 ```
 java -jar TwitchRecoverVODRetrieve.jar "965331363"
