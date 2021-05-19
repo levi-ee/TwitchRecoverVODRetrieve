@@ -2,8 +2,6 @@
 import TwitchRecover.Core.VOD;
 import TwitchRecover.CLI.Handlers.CoreHandler;
 import TwitchRecover.CLI.Handlers.VODHandler;
-import TwitchRecover.CLI.Enums.oType;
-import TwitchRecover.CLI.Enums.vType;
 import TwitchRecover.Core.Feeds;
 import TwitchRecover.Core.Enums.Quality;
 
@@ -24,10 +22,8 @@ public class TwitchRecoverVODRetrieve {
 
         int i=1;
         for(Quality qual: feeds.getQualities()){
-            System.out.print("\n" + qual.text + " - " + vod.getFeed(i-1));
+            System.out.print(qual.text + " - " + vod.getFeed(i-1) + "\n");
             i++;
         }
-        
-        System.out.print("\n");
     }
 }
